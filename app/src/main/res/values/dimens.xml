@@ -16,4 +16,13 @@
     <dimen name="padding_numero_right_cardview">10dp</dimen>
     <dimen name="image_card_size">200dp</dimen>
 
+    <!-- para el menu-->
+    <dimen name="texto_acerca_de">30dp</dimen>
+    <dimen name="distancia_boton_enviar_comentario">120dp</dimen>
+    <dimen name="texto_botones">20dp</dimen>
+
+    <!-- para el cardview de perfil-->
+    <dimen name="image_card_size_perfil">100dp</dimen>
+    <dimen name="card_size_perfil">140dp</dimen>
+
 </resources>

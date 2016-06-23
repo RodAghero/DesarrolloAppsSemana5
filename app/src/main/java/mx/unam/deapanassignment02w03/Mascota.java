@@ -20,6 +20,13 @@ public class Mascota {
         this.huesoAmarillo = huesoAmarillo;
     }
 
+    // Constructor para perfil
+    public Mascota(int foto, String huesos, int huesoAmarillo){
+        this.foto = foto;
+        this.huesos = huesos;
+        this.huesoAmarillo = huesoAmarillo;
+    }
+
     // Getters Setters
     public String getNombre() {
         return nombre;
