@@ -10,6 +10,9 @@ public class Mascota {
     private String huesos;
     private int huesoBlanco;
     private int huesoAmarillo;
+    // se añade ID para base de datos
+    private int id;
+    private int likes;
 
     // Constructor
     public Mascota(String nombre, int foto, String huesos, int huesoBlanco, int huesoAmarillo){
@@ -25,6 +28,20 @@ public class Mascota {
         this.foto = foto;
         this.huesos = huesos;
         this.huesoAmarillo = huesoAmarillo;
+    }
+
+    // Constructor vacío para base de datos
+    public Mascota(){
+
+    }
+
+    public Mascota(String nombre, int foto, String huesos, int huesoBlanco, int huesoAmarillo, int likes){
+        this.nombre = nombre;
+        this.foto   = foto;
+        this.huesos = huesos;
+        this.huesoBlanco = huesoBlanco;
+        this.huesoAmarillo = huesoAmarillo;
+        this.likes = likes;
     }
 
     // Getters Setters
@@ -66,5 +83,21 @@ public class Mascota {
 
     public void setHuesoAmarillo(int huesoAmarillo) {
         this.huesoAmarillo = huesoAmarillo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }

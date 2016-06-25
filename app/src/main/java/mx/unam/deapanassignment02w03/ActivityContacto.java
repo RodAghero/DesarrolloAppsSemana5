@@ -1,5 +1,6 @@
 package mx.unam.deapanassignment02w03;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +28,9 @@ public class ActivityContacto extends AppCompatActivity implements View.OnClickL
         editTextEmail = (EditText) findViewById(R.id.inputCorreo);
         editTextMessage = (EditText) findViewById(R.id.inputMensaje);
 
+        botonEnviarComentario = (Button) findViewById(R.id.botonSiguiente);
         botonEnviarComentario.setOnClickListener(this);
+
     }
 
     private void sendEmail(){

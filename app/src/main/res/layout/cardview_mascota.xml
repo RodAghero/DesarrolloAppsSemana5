@@ -51,6 +51,14 @@
                 />
 
             <TextView
+                android:id="@+id/tvLikesCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/likes"
+                android:textSize="@dimen/texto_cardview"
+                />
+
+            <TextView
                 android:id="@+id/tvNumeroCV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,8 +72,8 @@
 
             <ImageButton
                 android:id="@+id/imgHuesoAmarillo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:src="@drawable/dog_bone_yellow"
                 android:layout_gravity="center_horizontal"
                 />

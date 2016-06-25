@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 
-public class RecyclerViewFragment extends Fragment {
+public class RecyclerViewFragment extends Fragment implements iRecyclerViewFragmentView {
 
     public RecyclerViewFragment() {
         // Required empty public constructor
@@ -22,6 +22,7 @@ public class RecyclerViewFragment extends Fragment {
 
     ArrayList<Mascota> mascotas;
     private RecyclerView listaMascotas;
+    private iRecyclerViewFragmentPresenter presenter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,12 +32,16 @@ public class RecyclerViewFragment extends Fragment {
 
         listaMascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
 
+        presenter = new RecyclerViewFragmentPresenter(this, getContext());
+
+        /* Comentado y reubicado en los métodos de la interfaz
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 
         listaMascotas.setLayoutManager(llm);
         inicializarListaMascotas();
         inicializarAdaptador();
+        */
 
         return v;
 
@@ -54,14 +59,35 @@ public class RecyclerViewFragment extends Fragment {
     }
 
     // Método para el adaptador
+    // Comentado y reubicado en métodos de la interfaz
     public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, getActivity());
         listaMascotas.setAdapter(adaptador);
     }
+
 
     public void irSegundaActividad(View v){
         Intent intent = new Intent(getActivity(), SegundaActividad.class);
         startActivity(intent);
     }
 
+    // Métodos para la base de datos
+
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaMascotas.setLayoutManager(llm);
+    }
+
+    @Override
+    public MascotaAdaptador crearAdaptador(ArrayList<Mascota> mascotas) {
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, getActivity());
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarAdaptadorRV(MascotaAdaptador adaptador) {
+        listaMascotas.setAdapter(adaptador);
+    }
 }

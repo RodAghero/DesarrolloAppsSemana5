@@ -12,8 +12,8 @@
     <dimen name="padding_linear_layout">10dp</dimen>
     <dimen name="texto_cardview">20dp</dimen>
     <dimen name="padding_nombre_cardview">25dp</dimen>
-    <dimen name="padding_numero__left_cardview">55dp</dimen>
-    <dimen name="padding_numero_right_cardview">10dp</dimen>
+    <dimen name="padding_numero__left_cardview">20dp</dimen>
+    <dimen name="padding_numero_right_cardview">5dp</dimen>
     <dimen name="image_card_size">200dp</dimen>
 
     <!-- para el menu-->
