@@ -129,4 +129,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_dog_year);
     }
 
+    public void irSegundaActividad(View v){
+        Intent intent = new Intent(this, SegundaActividad.class);
+        startActivity(intent);
+    }
+
 }

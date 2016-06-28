@@ -25,8 +25,8 @@ public class SegundaActividad extends AppCompatActivity {
 
         listaMascotas.setLayoutManager(llm);
         inicializarListaMascotas();
-        // se comenta para que compile la base de datos (mas detalle en el método)
-        //inicializarAdaptador();
+
+        inicializarAdaptador();
 
         // Para el actionbar
         //Toolbar miActionBar = (Toolbar) findViewById(R.id.miActionBar);
@@ -48,13 +48,12 @@ public class SegundaActividad extends AppCompatActivity {
         mascotas.add(new Mascota("Cat02", R.drawable.grumpy_cat_head, "4", R.drawable.dog_bone_48, R.drawable.dog_bone_yellow));
     }
 
-    // El método se comenta porque el constructor cambio y no recibe getActivity() por alguna razón
     // Método para el adaptador
-    /*
+
     public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, getActivity() );
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, this);
         listaMascotas.setAdapter(adaptador);
     }
-    */
+
 
 }

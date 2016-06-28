@@ -65,11 +65,12 @@ public class RecyclerViewFragment extends Fragment implements iRecyclerViewFragm
         listaMascotas.setAdapter(adaptador);
     }
 
-
+    /*
     public void irSegundaActividad(View v){
         Intent intent = new Intent(getActivity(), SegundaActividad.class);
         startActivity(intent);
     }
+    */
 
     // Métodos para la base de datos
 
