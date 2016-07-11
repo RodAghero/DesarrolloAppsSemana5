@@ -1,4 +1,4 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.mail;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -7,7 +7,6 @@ import android.widget.Toast;
 
 import java.util.Properties;
 import javax.mail.Message;
-import javax.mail.Message.RecipientType;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
@@ -81,10 +80,6 @@ public class SendMail extends AsyncTask<Void, Void, Void> {
         return null;
 
     }
-
-
-
-
 
 
 

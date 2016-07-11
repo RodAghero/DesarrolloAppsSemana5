@@ -6,14 +6,20 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
+
+import mx.unam.deapanassignment02w03.adapter.PageAdapter;
+import mx.unam.deapanassignment02w03.menus.ActivityAcercaDe;
+import mx.unam.deapanassignment02w03.menus.ActivityConfigurarCuenta;
+import mx.unam.deapanassignment02w03.menus.ActivityContacto;
+import mx.unam.deapanassignment02w03.vista.fragment.PerfilFragment;
+import mx.unam.deapanassignment02w03.vista.fragment.RecyclerViewFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         // Casteo para views de FRAGMENT
         tabLayout =     (TabLayout) findViewById(R.id.tabLayout);
         viewPager =     (ViewPager) findViewById(R.id.viewPager);
+        Log.e("MainActivity", "onCreate");
 
         setUpViewPager();
 
@@ -106,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.mAcercaDe:
                 Intent intent1 = new Intent(this, ActivityAcercaDe.class);
                 startActivity(intent1);
+                break;
+            case R.id.mConfigurarCuenta:
+                Intent intent2 = new Intent(this,ActivityConfigurarCuenta.class);
+                startActivity(intent2);
                 break;
         }
         return super.onOptionsItemSelected(item);

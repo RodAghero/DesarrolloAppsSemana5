@@ -1,7 +1,9 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.menus;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import mx.unam.deapanassignment02w03.R;
 
 public class ActivityAcercaDe extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.menus;
 
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,8 @@ import android.widget.EditText;
 import java.util.Properties;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
+
+import mx.unam.deapanassignment02w03.R;
 
 public class ActivityContacto extends AppCompatActivity implements View.OnClickListener {
 

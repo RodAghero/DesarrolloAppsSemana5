@@ -1,6 +1,9 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.vista.fragment;
 
 import java.util.ArrayList;
+
+import mx.unam.deapanassignment02w03.adapter.MascotaAdaptador;
+import mx.unam.deapanassignment02w03.model.Mascota;
 
 /**
  * Created by Roy on 25/06/2016.
@@ -8,6 +11,8 @@ import java.util.ArrayList;
 public interface iRecyclerViewFragmentView {
 
     public void generarLinearLayoutVertical();
+
+    public void generarGridLayout();
 
     public MascotaAdaptador crearAdaptador(ArrayList<Mascota> mascotas);
 

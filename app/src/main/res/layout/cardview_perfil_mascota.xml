@@ -39,7 +39,7 @@
                 android:text="@string/pnumero"
                 android:textSize="@dimen/texto_cardview"
                 android:textStyle="bold"
-                android:paddingLeft="15dp"
+                android:paddingLeft="@dimen/padding_numero__left_cardview"
                 android:paddingRight="@dimen/padding_numero_right_cardview"
                 android:layout_gravity="center_vertical"
                 />
@@ -55,6 +55,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 </android.support.v7.widget.CardView>

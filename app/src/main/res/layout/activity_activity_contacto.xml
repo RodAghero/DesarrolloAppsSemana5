@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="mx.unam.deapanassignment02w03.ActivityContacto">
+    tools:context=".menus.ActivityContacto">
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -18,8 +19,8 @@
             android:id="@+id/inputNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre Completo"
-            android:layout_marginTop="50dp"/>
+            android:hint="@string/texto_hint_nombre"
+            android:layout_marginTop="@dimen/distancia_superior_hints"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -31,8 +32,8 @@
             android:id="@+id/inputCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Correo"
-            android:layout_marginTop="50dp"/>
+            android:hint="@string/texto_hint_correo"
+            android:layout_marginTop="@dimen/distancia_superior_hints"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -44,8 +45,8 @@
             android:id="@+id/inputMensaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mensaje"
-            android:layout_marginTop="50dp"/>
+            android:hint="@string/texto_hint_mensaje"
+            android:layout_marginTop="@dimen/distancia_superior_hints"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -55,7 +56,7 @@
         android:layout_height="wrap_content"
         android:text="@string/boton_enviar_comentario"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/distancia_boton_enviar_comentario"
+        android:layout_marginTop="@dimen/distancia_superior_boton"
         android:textSize="@dimen/texto_botones" />
 
 </LinearLayout>

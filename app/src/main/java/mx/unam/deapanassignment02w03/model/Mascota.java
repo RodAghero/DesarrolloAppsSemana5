@@ -1,4 +1,4 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.model;
 
 /**
  * Created by Roy on 12/06/2016.
@@ -11,8 +11,13 @@ public class Mascota {
     private int huesoBlanco;
     private int huesoAmarillo;
     // se añade ID para base de datos
-    private int id;
+    //private int id;
     private int likes;
+    // Se añade para retrofit (reusamos el in likes)
+    private String id;
+    private String nombreCompleto;
+    private String urlFoto;
+
 
     // Constructor
     public Mascota(String nombre, int foto, String huesos, int huesoBlanco, int huesoAmarillo){
@@ -41,6 +46,13 @@ public class Mascota {
         this.huesos = huesos;
         this.huesoBlanco = huesoBlanco;
         this.huesoAmarillo = huesoAmarillo;
+        this.likes = likes;
+    }
+
+    // Constructor para retrofit
+    public Mascota(String urlFoto, String nombreCompleto, int likes){
+        this.urlFoto = urlFoto;
+        this.nombreCompleto = nombreCompleto;
         this.likes = likes;
     }
 
@@ -84,7 +96,7 @@ public class Mascota {
     public void setHuesoAmarillo(int huesoAmarillo) {
         this.huesoAmarillo = huesoAmarillo;
     }
-
+/*
     public int getId() {
         return id;
     }
@@ -92,12 +104,36 @@ public class Mascota {
     public void setId(int id) {
         this.id = id;
     }
-
+*/
     public int getLikes() {
         return likes;
     }
 
     public void setLikes(int likes) {
         this.likes = likes;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public String getUrlFoto() {
+        return urlFoto;
+    }
+
+    public void setUrlFoto(String urlFoto) {
+        this.urlFoto = urlFoto;
     }
 }

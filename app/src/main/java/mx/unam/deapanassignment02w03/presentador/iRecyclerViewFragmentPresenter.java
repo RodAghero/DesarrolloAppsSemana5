@@ -1,4 +1,4 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.presentador;
 
 /**
  * Created by Roy on 25/06/2016.
@@ -6,6 +6,8 @@ package mx.unam.deapanassignment02w03;
 public interface iRecyclerViewFragmentPresenter {
 
     public void obtenerMascotasBaseDatos();
+
+    public void obtenerMediosRecientes();
 
     public void mostrarMascotasRV();
 

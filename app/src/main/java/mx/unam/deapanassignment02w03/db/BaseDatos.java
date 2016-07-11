@@ -1,13 +1,14 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.db;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+
+import mx.unam.deapanassignment02w03.model.Mascota;
 
 /**
  * Created by Roy on 25/06/2016.
@@ -57,6 +58,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         Cursor registros = db.rawQuery(query, null);
 
         while (registros.moveToNext()){
+            /*
             Mascota mascotaActual = new Mascota();
             mascotaActual.setId(registros.getInt(0));
             mascotaActual.setNombre(registros.getString(1));
@@ -75,6 +77,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             }
 
             mascotas.add(mascotaActual);
+            */
         }
         db.close();
         return mascotas;
@@ -99,12 +102,6 @@ public class BaseDatos extends SQLiteOpenHelper {
                 " FROM " + ConstantesBaseDatos.TABLE_LIKES_MASCOTAS +
                 " WHERE " + ConstantesBaseDatos.TABLE_LIKES_MASCOTAS_ID_MASCOTA + "="+mascota.getId();
 
-        /*
-        String query = "SELECT COUNT ( " + ConstantesBaseDatos.TABLE_LIKES_MASCOTAS_NUMERO_LIKES + " ) " +
-                    " FROM " + ConstantesBaseDatos.TABLE_LIKES_MASCOTAS +
-                    " WHERE " + ConstantesBaseDatos.TABLE_LIKES_MASCOTAS_ID_MASCOTA + " = " + mascota.getId();
-        */
-
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor registros = db.rawQuery(query, null);
 
@@ -114,6 +111,5 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.close();
         return likes;
     }
-
 
 }

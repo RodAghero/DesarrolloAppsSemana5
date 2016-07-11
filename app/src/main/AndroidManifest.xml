@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.unam.deapanassignment02w03">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -27,8 +27,11 @@
 
             >
         </activity>
-        <activity android:name=".ActivityContacto" />
-        <activity android:name=".ActivityAcercaDe"></activity>
+        <activity android:name=".menus.ActivityContacto" />
+        <activity android:name=".menus.ActivityAcercaDe" />
+
+        <activity android:name=".DetalleMascota" />
+        <activity android:name=".menus.ActivityConfigurarCuenta"></activity>
     </application>
 
 </manifest>

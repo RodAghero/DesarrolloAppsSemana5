@@ -72,18 +72,14 @@
 
             <ImageButton
                 android:id="@+id/imgHuesoAmarillo"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="@dimen/imagen_button_size"
+                android:layout_height="@dimen/imagen_button_size"
                 android:src="@drawable/dog_bone_yellow"
                 android:layout_gravity="center_horizontal"
                 />
 
-
         </LinearLayout>
 
-
     </LinearLayout>
-
-
 
 </android.support.v7.widget.CardView>

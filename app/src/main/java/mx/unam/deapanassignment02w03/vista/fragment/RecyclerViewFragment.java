@@ -1,10 +1,8 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.vista.fragment;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+
+import mx.unam.deapanassignment02w03.R;
+import mx.unam.deapanassignment02w03.adapter.MascotaAdaptador;
+import mx.unam.deapanassignment02w03.model.Mascota;
+import mx.unam.deapanassignment02w03.presentador.RecyclerViewFragmentPresenter;
+import mx.unam.deapanassignment02w03.presentador.iRecyclerViewFragmentPresenter;
+import mx.unam.deapanassignment02w03.vista.fragment.iRecyclerViewFragmentView;
 
 
 public class RecyclerViewFragment extends Fragment implements iRecyclerViewFragmentView {
@@ -60,11 +65,12 @@ public class RecyclerViewFragment extends Fragment implements iRecyclerViewFragm
 
     // Método para el adaptador
     // Comentado y reubicado en métodos de la interfaz
+    /*
     public void inicializarAdaptador(){
         MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, getActivity());
         listaMascotas.setAdapter(adaptador);
     }
-
+    */
     /*
     public void irSegundaActividad(View v){
         Intent intent = new Intent(getActivity(), SegundaActividad.class);
@@ -79,6 +85,12 @@ public class RecyclerViewFragment extends Fragment implements iRecyclerViewFragm
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         listaMascotas.setLayoutManager(llm);
+    }
+
+    @Override
+    public void generarGridLayout() {
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2);
+        listaMascotas.setLayoutManager(gridLayoutManager);
     }
 
     @Override

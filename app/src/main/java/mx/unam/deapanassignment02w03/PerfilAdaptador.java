@@ -1,7 +1,5 @@
 package mx.unam.deapanassignment02w03;
 
-import android.content.Context;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import mx.unam.deapanassignment02w03.model.Mascota;
 
 /**
  * Created by Roy on 19/06/2016.

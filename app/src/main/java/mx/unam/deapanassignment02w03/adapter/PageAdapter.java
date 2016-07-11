@@ -1,4 +1,4 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

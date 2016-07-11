@@ -1,9 +1,13 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.model;
 
 import android.content.ContentValues;
 import android.content.Context;
 
 import java.util.ArrayList;
+
+import mx.unam.deapanassignment02w03.R;
+import mx.unam.deapanassignment02w03.db.BaseDatos;
+import mx.unam.deapanassignment02w03.db.ConstantesBaseDatos;
 
 /**
  * Created by Roy on 25/06/2016.

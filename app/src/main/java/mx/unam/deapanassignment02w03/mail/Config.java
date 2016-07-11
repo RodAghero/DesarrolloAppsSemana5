@@ -1,4 +1,4 @@
-package mx.unam.deapanassignment02w03;
+package mx.unam.deapanassignment02w03.mail;
 
 /**
  * Created by Roy on 23/06/2016.
